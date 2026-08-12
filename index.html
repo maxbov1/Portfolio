@@ -13,7 +13,7 @@
       Cal("init", "intro-quick-chat", { origin: "https://app.cal.com" });
       Cal.config = Cal.config || {};
       Cal.config.forwardQueryParams = true;
-      Cal.ns["intro-quick-chat"]("ui", { "cssVarsPerTheme": { "light": { "cal-brand": "#3b5dc2" } }, "hideEventTypeDetails": false, "layout": "month_view" });
+      Cal.ns["intro-quick-chat"]("ui", { "hideEventTypeDetails": false, "layout": "month_view" });
     </script>
     <script src="script.js" defer></script>
   </head>
@@ -35,6 +35,16 @@
               <img src="uofalogo.png" alt="" />
             </div>
           </div>
+          <div class="profile-meta">
+            <div class="education-summary">
+              <p class="eyebrow">Education</p>
+              <p><strong>B.S. in Information Sciences</strong><br />Emphasis in Data Science<br />Minor in Business Administration</p>
+            </div>
+            <div class="social-links" aria-label="Social links">
+              <a class="text-link" href="https://www.linkedin.com/in/max-boving/" target="_blank" rel="noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
+              <a class="text-link" href="https://github.com/maxboving" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
         </div>
         <div class="intro-copy">
           <p class="eyebrow">About</p>
@@ -45,14 +55,27 @@
             <p>Recently, I helped build data infrastructure supporting more than 80 million environmental sensor records, developed tariff simulations for supplier decision-making, and led the development of an academic analytics platform deployed at the University of Arizona. I’m also exploring how AI can model human behavior and population differences through my work on OptoJury.</p>
             <p>I’m most interested in forward-deployed engineering, data science, and applied AI roles where I can combine technical ownership with product thinking, client collaboration, and real-world problem solving.</p>
           </div>
-          <div class="education-summary">
-            <p class="eyebrow">Education</p>
-            <p><strong>B.S. in Information Sciences</strong><br />Emphasis in Data Science<br />Minor in Business Administration</p>
-          </div>
-          <div class="social-links" aria-label="Social links">
-            <a class="text-link" href="https://www.linkedin.com/in/max-boving/" target="_blank" rel="noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
-            <a class="text-link" href="https://github.com/maxboving" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a>
-          </div>
+        </div>
+      </section>
+
+      <section class="references-section" aria-labelledby="references-title">
+        <div class="references-heading">
+          <p class="eyebrow" id="references-title">References</p>
+          <p class="references-note">A few words from people I’ve worked with.</p>
+        </div>
+        <div class="references-list">
+          <figure class="reference">
+            <blockquote>“Placeholder for a specific note about Max’s technical ownership and the systems he built.”</blockquote>
+            <figcaption><strong>Reference name</strong><span>Title · Organization</span><a class="reference-link" href="#" aria-label="LinkedIn profile for reference name">LinkedIn ↗</a></figcaption>
+          </figure>
+          <figure class="reference">
+            <blockquote>“Placeholder for a note about working with users, understanding the problem, and finding a practical solution.”</blockquote>
+            <figcaption><strong>Reference name</strong><span>Title · Organization</span><a class="reference-link" href="#" aria-label="LinkedIn profile for reference name">LinkedIn ↗</a></figcaption>
+          </figure>
+          <figure class="reference">
+            <blockquote>“Placeholder for a note about Max’s reliability, pace, and ability to work across technical and business concerns.”</blockquote>
+            <figcaption><strong>Reference name</strong><span>Title · Organization</span><a class="reference-link" href="#" aria-label="LinkedIn profile for reference name">LinkedIn ↗</a></figcaption>
+          </figure>
         </div>
       </section>
 
@@ -72,20 +95,20 @@
           <div class="tab-panel is-visible" id="panel-projects" role="tabpanel" aria-labelledby="tab-projects" tabindex="0">
             <div class="panel-intro"><p>Projects</p></div>
             <div class="index-list">
-              <article class="index-item index-item--detail"><strong>CEO Intelligence Assistant<small class="project-date"><time datetime="2026-04">Apr–Jun 2026</time></small></strong><div class="case-media" aria-label="CEO intelligence assistant media slot"><span>Image / demo</span></div><div class="case-study"><p>agenticMIND is a CEO-facing assistant for turning company information into reports, explanations, and next steps that can be checked.</p><ul class="case-points"><li>Connected documents and company context through retrieval, then added typed routing for reports, explanations, briefings, and planning.</li><li>Built the FastAPI and React system with SQLite persistence, trace metadata, document ingestion, and generated artifacts so users could see and keep the result.</li></ul></div></article>
+              <article class="index-item index-item--detail"><strong>CEO Intelligence Assistant<small class="project-date"><time datetime="2026-04">Apr–Jun 2026</time></small></strong><div class="case-media case-media--image" aria-label="AgenticMIND RAG assistant screenshot"><img src="agenticmindrag.png" alt="AgenticMIND RAG assistant generating a revenue model with flagged assumptions" /></div><div class="case-study"><p>agenticMIND is a CEO-facing assistant for turning company information into reports, explanations, and next steps that can be checked.</p><ul class="case-points"><li>Connected documents and company context through retrieval, then added typed routing for reports, explanations, briefings, and planning.</li><li>Built the FastAPI and React system with SQLite persistence, trace metadata, document ingestion, and generated artifacts so users could see and keep the result.</li></ul></div></article>
               <article class="index-item index-item--detail"><strong>Environmental Data &amp; AI Platform<small class="project-date"><time datetime="2025-11">Nov 2025–May 2026</time></small></strong><a class="case-media case-media--link case-media--image case-media--logo" href="https://uavip.arizona.edu/ai-and-world-models-biosphere-3" target="_blank" rel="noreferrer" aria-label="Open environmental data and AI project page"><img src="biosphere3-wordmark.jpg" alt="Biosphere 3" /><span>Project page ↗</span></a><div class="case-study"><p>Biosphere 3 is a digital operating layer for Biosphere 2, connecting environmental telemetry, research data, dashboards, agentic analysis, and a future 3D digital twin. I owned the technical work end to end across frontend, backend, pipelines, clustering, RAG, and infrastructure.</p><ul class="case-points"><li>Built a timeline-first PostgreSQL warehouse and Oracle-to-PostgreSQL pipelines, migrating roughly 3.2 GB of telemetry into a system with sub-100ms query performance.</li><li>Built the React/Vite and Astro frontends, FastAPI services, biome RAG and clustering prototypes, local Ollama/Qwen gateway, Minds APIs, and JetStream/Ansible environment.</li></ul></div></article>
               <article class="index-item index-item--detail"><strong>Autonomous Agentic Trading Bot<small class="project-date"><time datetime="2026-04">Apr 2026</time></small></strong><div class="case-media case-media--image" aria-label="Autonomous agentic trading bot portfolio screenshot"><img src="alpacaproof.png" alt="Paper trading portfolio showing a balance of $10,770.36" /><span>Paper trading ↗</span></div><div class="case-study"><p>ClawdTrader is a scheduled, agentic trading loop I built to explore how a group of specialized tools could support paper-trading decisions without putting real money at risk. The system could research a market, generate questions, manage a watchlist, and use those pieces of context to shape the next decision.</p><ul class="case-points"><li>Defined a custom SDK and connected the agents to Alpaca’s paper-trading API over MCP, giving the system a structured way to inspect markets and place simulated trades.</li><li>Built reusable components for deep research, question generation, watchlist management, and agent coordination so the loop could move from investigation to action on a schedule.</li></ul></div></article>
-              <article class="index-item index-item--detail"><strong>AI Surf Technique Coach<small class="project-date"><time datetime="2025-04">Apr–May 2025</time></small></strong><div class="case-media" aria-label="AI surf technique coach media slot"><span>Image / demo</span></div><div class="case-study"><p>SurfBuddy is a video-based surf coach. A user uploads footage of a maneuver, and the system compares their movement with reference technique before an LLM turns the analysis into useful coaching feedback.</p><ul class="case-points"><li>Built upload and frame-selection flows, then used MediaPipe, OpenCV, and 3D pose landmarks to analyze joints, stance, camera angle, and body position.</li><li>Compared user and reference poses, then passed the results to an OpenAI-powered coach that explains the movement and suggests drills.</li></ul></div></article>
+              <article class="index-item index-item--detail"><strong>AI Surf Technique Coach<small class="project-date"><time datetime="2025-04">Apr–May 2025</time></small></strong><div class="case-media case-media--image" aria-label="AI surf technique coach image"><img src="surfimage.png" alt="SurfBuddy surf technique coaching interface" /></div><div class="case-study"><p>SurfBuddy is a video-based surf coach. A user uploads footage of a maneuver, and the system compares their movement with reference technique before an LLM turns the analysis into useful coaching feedback.</p><ul class="case-points"><li>Built upload and frame-selection flows, then used MediaPipe, OpenCV, and 3D pose landmarks to analyze joints, stance, camera angle, and body position.</li><li>Compared user and reference poses, then passed the results to an OpenAI-powered coach that explains the movement and suggests drills.</li></ul></div></article>
             </div>
           </div>
 
           <div class="tab-panel" id="panel-experience" role="tabpanel" aria-labelledby="tab-experience" tabindex="0" hidden>
             <div class="panel-intro"><p>Experience</p></div>
             <div class="index-list">
-              <article class="index-item index-item--detail"><strong>AI Customer Support Platform<small class="project-date"><time datetime="2026-06">Jun 2026–Present</time></small></strong><a class="case-media case-media--link case-media--image case-media--logo" href="https://www.saticoy.ai/" target="_blank" rel="noreferrer" aria-label="Open Saticoy"><img src="saticoy-logo.svg" alt="Saticoy" /><span>Saticoy.ai ↗</span></a><div class="case-study"><p>Saticoy is an AI customer-support product that helps businesses answer questions from their own information and hand conversations to people when needed.</p><ul class="case-points"><li>Built chatbot and knowledge-base configuration with website and document sources so each business could shape what its assistant knew.</li><li>Worked across live-agent flows, dashboards, Next.js, Prisma, Cloudflare D1, R2, Vectorize, and automated tests to support the full customer conversation.</li></ul></div></article>
-              <article class="index-item index-item--detail"><strong>Jury Simulation &amp; Trial Intelligence<small class="role-label">Co-founder · Technical Lead</small><small class="project-date"><time datetime="2026-02">Feb 2026–Present</time></small></strong><a class="case-media case-media--link case-media--image case-media--logo" href="https://app.optojury.com/" target="_blank" rel="noreferrer" aria-label="Open jury simulation and trial intelligence platform"><img src="optojury-wordmark.svg" alt="OptoJury" /><span>Open platform ↗</span></a><div class="case-study"><p>OptoJury helps plaintiff attorneys prepare for trial by exploring how different jury profiles may respond to a case. As co-founder and technical lead, I owned the full implementation from product surface to cloud infrastructure.</p><ul class="case-points"><li>Built population-data, case-readiness, simulation, and report-generation workflows so attorneys could compare scenarios in a form they could review.</li><li>Implemented the full stack across FastAPI, PostgreSQL, Redis, Celery, Stripe, deployment, and production monitoring.</li></ul></div></article>
-              <article class="index-item index-item--detail"><strong>Data Quality &amp; Governance Platform<small class="role-label">Co-founder · Technical Lead</small><small class="project-date"><time datetime="2025-12">Dec 2025–May 2026</time></small></strong><a class="case-media case-media--link case-media--image case-media--logo" href="https://app.dataraft.io/" target="_blank" rel="noreferrer" aria-label="Open DataRaft"><img src="dataraft-logo.png" alt="DataRaft" /><span>Open platform ↗</span></a><div class="case-study"><p>DataRaft focused on making institutional data more trustworthy before it was used for analysis or AI-assisted reporting. As co-founder and technical lead, I built the product and infrastructure end to end.</p><ul class="case-points"><li>Separated raw inputs from derived results and added validation so inconsistent datasets could be analyzed without losing their source or silently producing bad output.</li><li>Owned the full stack, data workflows, governance, deployment, and cloud infrastructure needed to make the system repeatable.</li></ul></div></article>
-              <article class="index-item index-item--detail"><strong>Tariff Intelligence &amp; Trade Analytics<small class="role-label">Data Engineering Intern</small><small class="project-date"><time datetime="2026-02">2026</time></small></strong><div class="case-media" aria-label="Tariff intelligence and trade analytics media slot"><span>Image / demo</span></div><div class="case-study"><p>During my internship at HB Analytics, I worked on a tariff-visibility platform for turning messy product, trade, and policy data into estimates that sourcing teams could actually use. The product let users ingest a product by URL or CSV, normalize it, infer likely HTS classifications, clarify uncertain inputs, and estimate tariff exposure as of a chosen date.</p><ul class="case-points"><li>Built FastAPI services and data pipelines for ingestion, product normalization, HTS candidate inference, tariff quotes, policy overlays, and deterministic duty calculations with confidence and warning flags.</li><li>Built the extract–normalize–publish workflow into canonical gold datasets, ADLS/Fabric staging and core tables, stable BI views, release gates, lineage metadata, incremental recalculation, and pipeline health artifacts.</li></ul></div></article>
+              <article class="index-item index-item--detail"><strong>AI Customer Support Platform<small class="role-label">Full Stack Engineer</small><small class="project-date"><time datetime="2026-06">Jun 2026–Present</time></small></strong><a class="case-media case-media--link case-media--image case-media--logo" href="https://www.saticoy.ai/" target="_blank" rel="noreferrer" aria-label="Open Saticoy"><img src="saticoy-logo.svg" alt="Saticoy" /><span>Saticoy.ai ↗</span></a><div class="case-study"><p>Saticoy is an AI customer-support product that helps businesses answer questions from their own information and hand conversations to people when needed.</p><ul class="case-points"><li>Built chatbot and knowledge-base configuration with website and document sources so each business could shape what its assistant knew.</li><li>Worked across live-agent flows, dashboards, Next.js, Prisma, Cloudflare D1, R2, Vectorize, and automated tests to support the full customer conversation.</li></ul></div></article>
+              <article class="index-item index-item--detail"><strong>Jury Simulation &amp; Trial Intelligence<small class="role-label">Co-founder · Technical Lead</small><small class="project-date"><time datetime="2026-02">Feb 2026–Present</time></small></strong><a class="case-media case-media--link case-media--image case-media--logo" href="https://app.optojury.com/" target="_blank" rel="noreferrer" aria-label="Open jury simulation and trial intelligence platform"><img src="optologo.png" alt="OptoJury" /><span>Open platform ↗</span></a><div class="case-study"><p>OptoJury helps plaintiff attorneys prepare for trial by exploring how different jury profiles may respond to a case. As co-founder and technical lead, I owned the full implementation from product surface to cloud infrastructure.</p><ul class="case-points"><li>Built population-data, case-readiness, simulation, and report-generation workflows so attorneys could compare scenarios in a form they could review.</li><li>Implemented the full stack across FastAPI, PostgreSQL, Redis, Celery, Stripe, deployment, and production monitoring.</li></ul></div></article>
+              <article class="index-item index-item--detail"><strong>Data Quality &amp; Governance Platform<small class="role-label">Co-founder · Technical Lead</small><small class="project-date"><time datetime="2025-12">Dec 2025–May 2026</time></small></strong><div class="case-media case-media--image case-media--logo" aria-label="DataRaft logo"><img src="dataraft-logo.png" alt="DataRaft" /></div><div class="case-study"><p>DataRaft focused on making institutional data more trustworthy before it was used for analysis or AI-assisted reporting. As co-founder and technical lead, I built the product and infrastructure end to end.</p><ul class="case-points"><li>Separated raw inputs from derived results and added validation so inconsistent datasets could be analyzed without losing their source or silently producing bad output.</li><li>Owned the full stack, data workflows, governance, deployment, and cloud infrastructure needed to make the system repeatable.</li></ul></div></article>
+              <article class="index-item index-item--detail"><strong>Tariff Intelligence &amp; Trade Analytics<small class="role-label">Data Engineering Intern</small><small class="project-date"><time datetime="2026-02">2026</time></small></strong><a class="case-media case-media--link case-media--image case-media--logo" href="https://www.highbeamanalytics.com/" target="_blank" rel="noreferrer" aria-label="Open HighBeam Analytics"><img src="hbanalyticslogo.png" alt="HighBeam Analytics" /><span>HighBeam Analytics ↗</span></a><div class="case-study"><p>During my internship at HB Analytics, I worked on a tariff-visibility platform for turning messy product, trade, and policy data into estimates that sourcing teams could actually use. The product let users ingest a product by URL or CSV, normalize it, infer likely HTS classifications, clarify uncertain inputs, and estimate tariff exposure as of a chosen date.</p><ul class="case-points"><li>Built FastAPI services and data pipelines for ingestion, product normalization, HTS candidate inference, tariff quotes, policy overlays, and deterministic duty calculations with confidence and warning flags.</li><li>Built the extract–normalize–publish workflow into canonical gold datasets, ADLS/Fabric staging and core tables, stable BI views, release gates, lineage metadata, incremental recalculation, and pipeline health artifacts.</li></ul></div></article>
             </div>
           </div>
 
@@ -100,8 +123,12 @@
 
           <div class="tab-panel" id="panel-contact" role="tabpanel" aria-labelledby="tab-contact" tabindex="0" hidden>
             <div class="panel-intro"><p>Contact</p></div>
-            <p class="contact-lede">If you’d like to talk, choose a time.</p>
-            <button class="calendar-trigger" type="button" data-cal-link="peakwebsolutions/intro-quick-chat" data-cal-namespace="intro-quick-chat" data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'>Book a call <span aria-hidden="true">↘</span></button>
+            <p class="contact-lede">If you’d like to talk, choose a way to connect.</p>
+            <div class="contact-options">
+              <a class="contact-option" href="mailto:maxboving@gmail.com?subject=Hello%20Max&amp;body=Hi%20Max%2C%0A%0AI%27d%20like%20to%20talk%20about%20%0A%0ABest%2C%0A"><strong>Send me an email</strong><span>maxboving@gmail.com ↗</span></a>
+              <button class="contact-option" type="button" data-cal-link="maxboving/intro-quick-chat" data-cal-namespace="intro-quick-chat" data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'><strong>Book a call</strong><span>Find a time on my calendar ↘</span></button>
+              <a class="contact-option" href="https://www.linkedin.com/in/max-boving/" target="_blank" rel="noreferrer"><strong>Connect on LinkedIn</strong><span>linkedin.com/in/max-boving ↗</span></a>
+            </div>
           </div>
 
           <div class="tab-panel" id="panel-resume" role="tabpanel" aria-labelledby="tab-resume" tabindex="0" hidden>
@@ -140,7 +167,7 @@
         </div>
         <h2 id="dialog-title">How would you like to connect?</h2>
         <div class="dialog-options">
-          <button class="dialog-option" type="button" data-book-call data-cal-link="peakwebsolutions/intro-quick-chat" data-cal-namespace="intro-quick-chat" data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'><strong>Book a call</strong><span>Find a time on my calendar ↘</span></button>
+          <button class="dialog-option" type="button" data-book-call data-cal-link="maxboving/intro-quick-chat" data-cal-namespace="intro-quick-chat" data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'><strong>Book a call</strong><span>Find a time on my calendar ↘</span></button>
           <a class="dialog-option" href="mailto:maxboving@gmail.com?subject=Hello%20Max&amp;body=Hi%20Max%2C%0A%0AI%27d%20like%20to%20talk%20about%20%0A%0ABest%2C%0A"><strong>Send me an email</strong><span>maxboving@gmail.com ↗</span></a>
           <a class="dialog-option" href="https://www.linkedin.com/in/max-boving/" target="_blank" rel="noreferrer"><strong>Connect on LinkedIn</strong><span>linkedin.com/in/max-boving ↗</span></a>
         </div>
