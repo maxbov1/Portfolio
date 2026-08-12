@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="The personal portfolio of Max Boving." />
+    <meta name="theme-color" content="#f4f3ef" />
+    <title>Max Boving — Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header shell">
+      <a class="wordmark" href="/" aria-label="Home">Max Boving<span>.</span></a>
+      <p class="header-note">Personal portfolio / 2026</p>
+      <button class="header-contact" id="open-contact" type="button" aria-haspopup="dialog" aria-controls="contact-dialog">Get in touch <span aria-hidden="true">↘</span></button>
+    </header>
+
+    <main id="main" class="shell">
+      <section class="intro" aria-labelledby="intro-title">
+        <div class="portrait-wrap">
+          <div class="portrait">
+            <img src="portrait.jpg" alt="Portrait" />
+            <div class="university-mark" aria-label="University of Arizona">
+              <img src="uofalogo.png" alt="" />
+            </div>
+          </div>
+        </div>
+        <div class="intro-copy">
+          <p class="eyebrow">About</p>
+          <h1 class="visually-hidden" id="intro-title">About Max Boving</h1>
+          <div class="about-copy">
+            <p>I’m an AI and data engineer who enjoys turning complex, messy problems into systems people can actually use.</p>
+            <p>My work spans data science, software engineering, and applied AI. I’ve built predictive models, RAG systems, analytics platforms, data pipelines, and APIs across legal education, environmental research, and business analytics. I’m especially drawn to projects where I can work closely with users, understand how they operate, and translate their needs into a practical technical solution.</p>
+            <p>Recently, I helped build data infrastructure supporting more than 80 million environmental sensor records, developed tariff simulations for supplier decision-making, and led the development of an academic analytics platform deployed at the University of Arizona. I’m also exploring how AI can model human behavior and population differences through my work on OptoJury.</p>
+            <p>I’m most interested in forward-deployed engineering, data science, and applied AI roles where I can combine technical ownership with product thinking, client collaboration, and real-world problem solving.</p>
+          </div>
+          <div class="education-summary">
+            <p class="eyebrow">Education</p>
+            <p><strong>B.S. in Information Sciences</strong><br />Emphasis in Data Science<br />Minor in Business Administration</p>
+          </div>
+          <div class="social-links" aria-label="Social links">
+            <a class="text-link" href="https://www.linkedin.com/in/max-boving/" target="_blank" rel="noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
+            <a class="text-link" href="https://github.com/maxboving" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="portfolio-section" aria-label="Portfolio sections">
+        <div class="tab-area">
+          <aside class="tabs-side" aria-label="Portfolio navigation">
+            <div class="tabs" role="tablist" aria-label="Portfolio sections">
+              <button class="tab is-active" id="tab-projects" role="tab" aria-selected="true" aria-controls="panel-projects" tabindex="0">Projects</button>
+              <button class="tab" id="tab-experience" role="tab" aria-selected="false" aria-controls="panel-experience" tabindex="-1">Experience</button>
+              <button class="tab" id="tab-hobbies" role="tab" aria-selected="false" aria-controls="panel-hobbies" tabindex="-1">Hobbies</button>
+              <button class="tab" id="tab-contact" role="tab" aria-selected="false" aria-controls="panel-contact" tabindex="-1">Contact</button>
+              <button class="tab" id="tab-resume" role="tab" aria-selected="false" aria-controls="panel-resume" tabindex="-1">Resume</button>
+            </div>
+          </aside>
+
+          <div class="panels">
+          <div class="tab-panel is-visible" id="panel-projects" role="tabpanel" aria-labelledby="tab-projects" tabindex="0">
+            <div class="panel-intro"><p>Projects</p></div>
+            <div class="index-list">
+              <article class="index-item index-item--detail"><strong>agenticMIND<small class="project-date"><time datetime="2026-04">Apr–Jun 2026</time></small></strong><div class="case-media" aria-label="agenticMIND media slot"><span>Image / demo</span></div><div class="case-study"><p>agenticMIND is a CEO-facing assistant for turning company information into reports, explanations, and next steps that can be checked.</p><ul class="case-points"><li>Connected documents and company context through retrieval, then added typed routing for reports, explanations, briefings, and planning.</li><li>Built the FastAPI and React system with SQLite persistence, trace metadata, document ingestion, and generated artifacts so users could see and keep the result.</li></ul></div></article>
+              <article class="index-item index-item--detail"><strong>Biosphere 3<small class="project-date"><time datetime="2025-11">Nov 2025–May 2026</time></small></strong><a class="case-media case-media--link" href="https://uavip.arizona.edu/ai-and-world-models-biosphere-3" target="_blank" rel="noreferrer" aria-label="Open Biosphere 3 project page"><span>Biosphere 3 ↗</span></a><div class="case-study"><p>Biosphere 3 is a digital operating layer for Biosphere 2, connecting environmental telemetry, research data, dashboards, agentic analysis, and a future 3D digital twin. I owned the technical work end to end across frontend, backend, pipelines, clustering, RAG, and infrastructure.</p><ul class="case-points"><li>Built a timeline-first PostgreSQL warehouse and Oracle-to-PostgreSQL pipelines, migrating roughly 3.2 GB of telemetry into a system with sub-100ms query performance.</li><li>Built the React/Vite and Astro frontends, FastAPI services, biome RAG and clustering prototypes, local Ollama/Qwen gateway, Minds APIs, and JetStream/Ansible environment.</li></ul></div></article>
+              <article class="index-item index-item--detail"><strong>ClawdTrader<small class="project-date"><time datetime="2026-04">Apr 2026</time></small></strong><div class="case-media" aria-label="ClawdTrader media slot"><span>Image / demo</span></div><div class="case-study"><p>ClawdTrader is a scheduled, agentic trading loop I built to explore how a group of specialized tools could support paper-trading decisions without putting real money at risk. The system could research a market, generate questions, manage a watchlist, and use those pieces of context to shape the next decision.</p><ul class="case-points"><li>Defined a custom SDK and connected the agents to Alpaca’s paper-trading API over MCP, giving the system a structured way to inspect markets and place simulated trades.</li><li>Built reusable components for deep research, question generation, watchlist management, and agent coordination so the loop could move from investigation to action on a schedule.</li></ul></div></article>
+              <article class="index-item index-item--detail"><strong>SurfBuddy<small class="project-date"><time datetime="2025-04">Apr–May 2025</time></small></strong><div class="case-media" aria-label="SurfBuddy media slot"><span>Image / demo</span></div><div class="case-study"><p>SurfBuddy is a video-based surf coach. A user uploads footage of a maneuver, and the system compares their movement with reference technique before an LLM turns the analysis into useful coaching feedback.</p><ul class="case-points"><li>Built upload and frame-selection flows, then used MediaPipe, OpenCV, and 3D pose landmarks to analyze joints, stance, camera angle, and body position.</li><li>Compared user and reference poses, then passed the results to an OpenAI-powered coach that explains the movement and suggests drills.</li></ul></div></article>
+            </div>
+          </div>
+
+          <div class="tab-panel" id="panel-experience" role="tabpanel" aria-labelledby="tab-experience" tabindex="0" hidden>
+            <div class="panel-intro"><p>Experience</p></div>
+            <div class="index-list">
+              <article class="index-item index-item--detail"><strong>Saticoy<small class="project-date"><time datetime="2026-06">Jun 2026–Present</time></small></strong><div class="case-media" aria-label="Saticoy media slot"><span>Image / demo</span></div><div class="case-study"><p>Saticoy is an AI customer-support product that helps businesses answer questions from their own information and hand conversations to people when needed.</p><ul class="case-points"><li>Built chatbot and knowledge-base configuration with website and document sources so each business could shape what its assistant knew.</li><li>Worked across live-agent flows, dashboards, Next.js, Prisma, Cloudflare D1, R2, Vectorize, and automated tests to support the full customer conversation.</li></ul></div></article>
+              <article class="index-item index-item--detail"><strong>OptoJury<small class="role-label">Co-founder · Technical Lead</small><small class="project-date"><time datetime="2026-02">Feb 2026–Present</time></small></strong><a class="case-media case-media--link" href="https://app.optojury.com/" target="_blank" rel="noreferrer" aria-label="Open OptoJury"><span>OptoJury ↗</span></a><div class="case-study"><p>OptoJury helps plaintiff attorneys prepare for trial by exploring how different jury profiles may respond to a case. As co-founder and technical lead, I owned the full implementation from product surface to cloud infrastructure.</p><ul class="case-points"><li>Built population-data, case-readiness, simulation, and report-generation workflows so attorneys could compare scenarios in a form they could review.</li><li>Implemented the full stack across FastAPI, PostgreSQL, Redis, Celery, Stripe, deployment, and production monitoring.</li></ul></div></article>
+              <article class="index-item index-item--detail"><strong>DataRaft<small class="role-label">Co-founder · Technical Lead</small><small class="project-date"><time datetime="2025-12">Dec 2025–May 2026</time></small></strong><div class="case-media" aria-label="DataRaft media slot"><span>Image / demo</span></div><div class="case-study"><p>DataRaft focused on making institutional data more trustworthy before it was used for analysis or AI-assisted reporting. As co-founder and technical lead, I built the product and infrastructure end to end.</p><ul class="case-points"><li>Separated raw inputs from derived results and added validation so inconsistent datasets could be analyzed without losing their source or silently producing bad output.</li><li>Owned the full stack, data workflows, governance, deployment, and cloud infrastructure needed to make the system repeatable.</li></ul></div></article>
+            </div>
+          </div>
+
+          <div class="tab-panel" id="panel-hobbies" role="tabpanel" aria-labelledby="tab-hobbies" tabindex="0" hidden>
+            <div class="panel-intro"><p>Hobbies</p></div>
+            <div class="hobby-grid">
+              <div><strong>Reading</strong></div>
+              <div><strong>Being outside</strong></div>
+              <div><strong>Making things</strong></div>
+            </div>
+          </div>
+
+          <div class="tab-panel" id="panel-contact" role="tabpanel" aria-labelledby="tab-contact" tabindex="0" hidden>
+            <div class="panel-intro"><p>Contact</p></div>
+            <p class="contact-lede">If you’d like to talk, choose a time below.</p>
+            <!-- Replace the URL below with your Cal.com or Calendly event URL. -->
+            <div class="calendar-frame">
+              <iframe src="https://cal.com/maxboving/30min" title="Scheduling calendar" loading="lazy" allow="camera; microphone; fullscreen; payment"></iframe>
+              <p class="calendar-fallback">If the calendar doesn’t load, <a class="text-link" href="https://cal.com/maxboving/30min" target="_blank" rel="noreferrer">open scheduling in a new tab <span aria-hidden="true">↗</span></a>.</p>
+            </div>
+          </div>
+
+          <div class="tab-panel" id="panel-resume" role="tabpanel" aria-labelledby="tab-resume" tabindex="0" hidden>
+            <div class="panel-intro"><p>Resume · June 2026</p></div>
+            <div class="resume-panel">
+              <p class="resume-copy">A current overview of my experience, education, and technical work.</p>
+              <div class="pdf-viewer" aria-label="June 2026 resume preview">
+                <div class="pdf-toolbar">
+                  <button class="pdf-button" id="pdf-prev" type="button" aria-label="Previous resume page">←</button>
+                  <span><span id="pdf-page">1</span> / <span id="pdf-pages">—</span></span>
+                  <button class="pdf-button" id="pdf-next" type="button" aria-label="Next resume page">→</button>
+                  <span class="pdf-toolbar-spacer"></span>
+                  <button class="pdf-button" id="pdf-zoom-out" type="button" aria-label="Zoom out">−</button>
+                  <button class="pdf-button" id="pdf-zoom-in" type="button" aria-label="Zoom in">+</button>
+                </div>
+                <div class="pdf-canvas-wrap"><canvas id="pdf-canvas"></canvas></div>
+                <object class="pdf-native-fallback" id="pdf-native-fallback" data="MaxBov_Resume_june.pdf" type="application/pdf" aria-label="June 2026 resume">
+                  <p>Open the <a href="MaxBov_Resume_june.pdf">resume PDF</a> directly.</p>
+                </object>
+                <p class="pdf-status" id="pdf-status">Loading resume preview…</p>
+              </div>
+              <a class="resume-link" href="MaxBov_Resume_june.pdf" download>Download June resume <span aria-hidden="true">↓</span></a>
+              <p class="resume-note">PDF · Updated June 2026</p>
+            </div>
+          </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div class="dialog-backdrop" id="contact-dialog" hidden>
+      <section class="contact-dialog" role="dialog" aria-modal="true" aria-labelledby="dialog-title">
+        <div class="dialog-heading">
+          <p class="eyebrow">Contact</p>
+          <button class="dialog-close" id="close-contact" type="button" aria-label="Close contact options">×</button>
+        </div>
+        <h2 id="dialog-title">How would you like to connect?</h2>
+        <div class="dialog-options">
+          <button class="dialog-option" type="button" data-book-call><strong>Book a call</strong><span>Find a time on my calendar ↘</span></button>
+          <a class="dialog-option" href="mailto:maxboving@gmail.com?subject=Hello%20Max&amp;body=Hi%20Max%2C%0A%0AI%27d%20like%20to%20talk%20about%20%0A%0ABest%2C%0A"><strong>Send me an email</strong><span>maxboving@gmail.com ↗</span></a>
+          <a class="dialog-option" href="https://www.linkedin.com/in/max-boving/" target="_blank" rel="noreferrer"><strong>Connect on LinkedIn</strong><span>linkedin.com/in/max-boving ↗</span></a>
+        </div>
+      </section>
+    </div>
+
+    <footer class="site-footer shell">
+      <p>© 2026</p>
+      <a href="#main">Back to top ↑</a>
+    </footer>
+  </body>
+</html>
