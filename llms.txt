@@ -1,0 +1,19 @@
+# Max Boving
+
+> Personal portfolio for Max Boving, an AI and data engineer working across data science, software engineering, and applied AI.
+
+## About
+
+Max builds practical systems from complex data and software problems, with experience across environmental research, legal education, business analytics, predictive modeling, RAG systems, data pipelines, APIs, and cloud infrastructure.
+
+## Selected work
+
+- Projects: CEO intelligence assistant, environmental data and AI platform, autonomous agentic trading bot, and AI surf technique coach.
+- Experience: AI customer support platform, jury simulation and trial intelligence, and data quality and governance platform.
+- [Resume PDF](https://maxboving.com/MaxBov_Resume_june.pdf): June 2026 resume and downloadable PDF.
+
+## Links
+
+- [LinkedIn](https://www.linkedin.com/in/max-boving/)
+- [GitHub](https://github.com/maxboving)
+- [Portfolio](https://maxboving.com/)
