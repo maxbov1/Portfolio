@@ -61,10 +61,15 @@ h1 em, h2 em { font-style: italic; }
 .references-section { padding: 0 8.5% 112px; }
 .references-heading { display: flex; justify-content: space-between; gap: 24px; padding-bottom: 22px; border-bottom: 1px solid var(--line); }
 .references-note { margin: 0; color: var(--muted); font-size: 13px; }
-.references-list { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; }
+.references-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0; }
 .reference { margin: 0; padding: 28px 28px 0 0; }
 .reference + .reference { padding-left: 28px; border-left: 1px solid var(--line); }
-.reference blockquote { margin: 0; color: var(--ink); font-family: var(--serif); font-size: 20px; letter-spacing: -.025em; line-height: 1.2; }
+.reference-details summary { margin: 0; color: var(--ink); cursor: pointer; font-family: var(--serif); font-size: 20px; letter-spacing: -.025em; line-height: 1.2; list-style: none; }
+.reference-details summary::-webkit-details-marker { display: none; }
+.reference-details summary::after { display: block; margin-top: 18px; color: var(--accent); content: "Read full reference ↘"; font-family: var(--sans); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; }
+.reference-details summary:hover, .reference-details summary:focus-visible { color: var(--accent); }
+.reference-details[open] summary { margin-bottom: 22px; }
+.reference-details blockquote { margin: 0; color: var(--muted); font-family: var(--serif); font-size: 17px; letter-spacing: -.02em; line-height: 1.35; }
 .reference figcaption { display: grid; gap: 3px; margin-top: 28px; color: var(--muted); font-size: 11px; line-height: 1.35; }
 .reference figcaption strong { color: var(--ink); font-weight: 400; }
 .reference-link { width: fit-content; margin-top: 5px; color: var(--accent); text-underline-offset: 3px; }
