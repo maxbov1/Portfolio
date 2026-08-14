@@ -73,28 +73,30 @@
           <p class="eyebrow" id="references-title">References</p>
           <p class="references-note">A few words from people I’ve worked with.</p>
         </div>
-        <div class="references-list">
-          <figure class="reference">
-            <details class="reference-details">
-              <summary>“Max is one of those rare people whose drive, depth, and vision stand out well beyond his years.”</summary>
-              <blockquote>“Max is one of those rare people whose drive, depth, and vision stand out well beyond his years. I’ve had the privilege of working with him over the past two years as an intern, student worker, and now as a company co-founder, and he consistently brings both the ambition to create and the determination to see projects through to completion. I’m excited to continue building alongside him and see what he accomplishes next.”</blockquote>
-            </details>
+        <div class="references-viewport" aria-live="polite">
+          <div class="references-list">
+          <figure class="reference is-active" aria-hidden="false" aria-label="Testimonial 1 of 3" role="group">
+            <blockquote>“Max is one of those rare people whose drive, depth, and vision stand out well beyond his years. I’ve had the privilege of working with him over the past two years as an intern, student worker, and now as a company co-founder, and he consistently brings both the ambition to create and the determination to see projects through to completion. I’m excited to continue building alongside him and see what he accomplishes next.”</blockquote>
             <figcaption><strong>Michael Wagenheim</strong><span>Assistant Dean of Information Technology &amp; Online Learning<br />James E. Rogers College of Law</span><a class="reference-link" href="https://www.linkedin.com/in/michael-wagenheim-8039573/" target="_blank" rel="noreferrer">LinkedIn ↗</a></figcaption>
           </figure>
-          <figure class="reference">
-            <details class="reference-details">
-              <summary>“He was particularly good at taking an idea that wasn’t fully defined, figuring out what was needed, and moving the project forward with minimal direction.”</summary>
-              <blockquote>“Max supported several projects for me when I was a faculty member at the University of Arizona, and he was consistently a pleasure to work with. He is smart, reliable, curious, and a great problem solver. He was particularly good at taking an idea that wasn’t fully defined, figuring out what was needed, and moving the project forward with minimal direction. He also has a great attitude and is very receptive to feedback. I would gladly work with Max again.”</blockquote>
-            </details>
+          <figure class="reference" aria-hidden="true" aria-label="Testimonial 2 of 3" role="group">
+            <blockquote>“Max supported several projects for me when I was a faculty member at the University of Arizona, and he was consistently a pleasure to work with. He is smart, reliable, curious, and a great problem solver. He was particularly good at taking an idea that wasn’t fully defined, figuring out what was needed, and moving the project forward with minimal direction. He also has a great attitude and is very receptive to feedback. I would gladly work with Max again.”</blockquote>
             <figcaption><strong>Jessica Findley</strong><span>Legal Education Researcher &amp; Consultant · JD/PhD<br />Co-Founder &amp; Chief Science Officer, VerumSoft</span><a class="reference-link" href="https://www.linkedin.com/in/jessica-findley-708306230/" target="_blank" rel="noreferrer">LinkedIn ↗</a></figcaption>
           </figure>
-          <figure class="reference">
-            <details class="reference-details">
-              <summary>“Working with Max was a highlight of the Biosphere 2 Digital Twin project.”</summary>
-              <blockquote>“Working with Max was a highlight of the Biosphere 2 Digital Twin project. He fully stepped in and led the team, tackled the technology with rigor, and kept everything moving. 100% professional, would work with him again in a heartbeat.”</blockquote>
-            </details>
+          <figure class="reference" aria-hidden="true" aria-label="Testimonial 3 of 3" role="group">
+            <blockquote>“Working with Max was a highlight of the Biosphere 2 Digital Twin project. He fully stepped in and led the team, tackled the technology with rigor, and kept everything moving. 100% professional, would work with him again in a heartbeat.”</blockquote>
             <figcaption><strong>Ash Scheder Black</strong><span>Director of AI, XR and Student Success<br />University of Arizona</span><a class="reference-link" href="https://www.linkedin.com/in/ashschederblack/" target="_blank" rel="noreferrer">LinkedIn ↗</a></figcaption>
           </figure>
+          </div>
+        </div>
+        <div class="references-controls" aria-label="Testimonial controls">
+          <button class="reference-control" id="references-previous" type="button" aria-label="Previous testimonial">←</button>
+          <div class="reference-dots" role="tablist" aria-label="Choose a testimonial">
+            <button class="reference-dot is-active" type="button" role="tab" aria-selected="true" aria-label="Show testimonial 1" tabindex="0"></button>
+            <button class="reference-dot" type="button" role="tab" aria-selected="false" aria-label="Show testimonial 2" tabindex="-1"></button>
+            <button class="reference-dot" type="button" role="tab" aria-selected="false" aria-label="Show testimonial 3" tabindex="-1"></button>
+          </div>
+          <button class="reference-control" id="references-next" type="button" aria-label="Next testimonial">→</button>
         </div>
       </section>
 
@@ -112,7 +114,6 @@
 
           <div class="panels">
           <div class="tab-panel is-visible" id="panel-projects" role="tabpanel" aria-labelledby="tab-projects" tabindex="0">
-            <div class="panel-intro"><p>Projects</p></div>
             <div class="index-list">
               <article class="index-item index-item--detail"><strong>CEO Intelligence Assistant<small class="project-date"><time datetime="2026-04">Apr–Jun 2026</time></small></strong><div class="case-media case-media--image" aria-label="AgenticMIND RAG assistant screenshot"><img src="agenticmindrag.png" alt="AgenticMIND RAG assistant generating a revenue model with flagged assumptions" /></div><div class="case-study"><p>agenticMIND is a CEO-facing assistant for turning company information into reports, explanations, and next steps that can be checked.</p><ul class="case-points"><li>Connected documents and company context through retrieval, then added typed routing for reports, explanations, briefings, and planning.</li><li>Built the FastAPI and React system with SQLite persistence, trace metadata, document ingestion, and generated artifacts so users could see and keep the result.</li></ul></div></article>
               <article class="index-item index-item--detail"><strong>Environmental Data &amp; AI Platform<small class="project-date"><time datetime="2025-11">Nov 2025–May 2026</time></small></strong><a class="case-media case-media--link case-media--image case-media--logo" href="https://uavip.arizona.edu/ai-and-world-models-biosphere-3" target="_blank" rel="noreferrer" aria-label="Open environmental data and AI project page"><img src="biosphere3-wordmark.jpg" alt="Biosphere 3" /><span>Project page ↗</span></a><div class="case-study"><p>Biosphere 3 is a digital operating layer for Biosphere 2, connecting environmental telemetry, research data, dashboards, agentic analysis, and a future 3D digital twin. I owned the technical work end to end across frontend, backend, pipelines, clustering, RAG, and infrastructure.</p><ul class="case-points"><li>Built a timeline-first PostgreSQL warehouse and Oracle-to-PostgreSQL pipelines, migrating roughly 3.2 GB of telemetry into a system with sub-100ms query performance.</li><li>Built the React/Vite and Astro frontends, FastAPI services, biome RAG and clustering prototypes, local Ollama/Qwen gateway, Minds APIs, and JetStream/Ansible environment.</li></ul></div></article>
@@ -122,7 +123,6 @@
           </div>
 
           <div class="tab-panel" id="panel-experience" role="tabpanel" aria-labelledby="tab-experience" tabindex="0" hidden>
-            <div class="panel-intro"><p>Experience</p></div>
             <div class="index-list">
               <article class="index-item index-item--detail"><strong>Saticoy<small class="role-label">Full Stack Engineer</small><small class="experience-focus">AI Customer Support Platform</small><small class="project-date"><time datetime="2026-06">Jun 2026–Present</time></small></strong><a class="case-media case-media--link case-media--image case-media--logo" href="https://www.saticoy.ai/" target="_blank" rel="noreferrer" aria-label="Open Saticoy"><img src="saticoy-logo.svg" alt="Saticoy" /><span>Saticoy.ai ↗</span></a><div class="case-study"><p>Saticoy is an AI customer-support product that helps businesses answer questions from their own information and hand conversations to people when needed.</p><ul class="case-points"><li>Built chatbot and knowledge-base configuration with website and document sources so each business could shape what its assistant knew.</li><li>Worked across live-agent flows, dashboards, Next.js, Prisma, Cloudflare D1, R2, Vectorize, and automated tests to support the full customer conversation.</li></ul></div></article>
               <article class="index-item index-item--detail"><strong>OptoJury<small class="role-label">Co-founder · Technical Lead</small><small class="experience-focus">Jury Simulation &amp; Trial Intelligence</small><small class="project-date"><time datetime="2026-02">Feb 2026–Present</time></small></strong><a class="case-media case-media--link case-media--image case-media--logo" href="https://app.optojury.com/" target="_blank" rel="noreferrer" aria-label="Open jury simulation and trial intelligence platform"><img src="optologo.png" alt="OptoJury" /><span>Open platform ↗</span></a><div class="case-study"><p>OptoJury helps plaintiff attorneys prepare for trial by exploring how different jury profiles may respond to a case. As co-founder and technical lead, I owned the full implementation from product surface to cloud infrastructure.</p><ul class="case-points"><li>Built population-data, case-readiness, simulation, and report-generation workflows so attorneys could compare scenarios in a form they could review.</li><li>Implemented the full stack across FastAPI, PostgreSQL, Redis, Celery, Stripe, deployment, and production monitoring.</li></ul></div></article>
@@ -132,7 +132,6 @@
           </div>
 
           <div class="tab-panel" id="panel-hobbies" role="tabpanel" aria-labelledby="tab-hobbies" tabindex="0" hidden>
-            <div class="panel-intro"><p>Hobbies</p></div>
             <div class="hobby-grid">
               <div><strong>Cooking</strong></div>
               <div><strong>Surfing</strong></div>
@@ -141,7 +140,6 @@
           </div>
 
           <div class="tab-panel" id="panel-contact" role="tabpanel" aria-labelledby="tab-contact" tabindex="0" hidden>
-            <div class="panel-intro"><p>Contact</p></div>
             <p class="contact-lede">If you’d like to talk, choose a way to connect.</p>
             <div class="contact-options">
               <a class="contact-option" href="mailto:maxboving@gmail.com?subject=Hello%20Max&amp;body=Hi%20Max%2C%0A%0AI%27d%20like%20to%20talk%20about%20%0A%0ABest%2C%0A"><strong>Send me an email</strong><span>maxboving@gmail.com ↗</span></a>
@@ -151,7 +149,6 @@
           </div>
 
           <div class="tab-panel" id="panel-resume" role="tabpanel" aria-labelledby="tab-resume" tabindex="0" hidden>
-            <div class="panel-intro"><p>Resume · June 2026</p></div>
             <div class="resume-panel">
               <p class="resume-copy">A current overview of my experience, education, and technical work.</p>
               <div class="pdf-viewer" aria-label="June 2026 resume preview">

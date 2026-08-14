@@ -88,6 +88,64 @@ tabs.forEach((tab, index) => {
   });
 });
 
+const referenceSlides = [...document.querySelectorAll('.reference')];
+const referenceDots = [...document.querySelectorAll('.reference-dot')];
+const referencePrevious = document.querySelector('#references-previous');
+const referenceNext = document.querySelector('#references-next');
+const referencesViewport = document.querySelector('.references-viewport');
+let activeReference = 0;
+let referenceTimer;
+
+function showReference(index) {
+  activeReference = (index + referenceSlides.length) % referenceSlides.length;
+  referenceSlides.forEach((slide, slideIndex) => {
+    const isActive = slideIndex === activeReference;
+    slide.classList.toggle('is-active', isActive);
+    slide.setAttribute('aria-hidden', String(!isActive));
+    slide.inert = !isActive;
+  });
+  referenceDots.forEach((dot, dotIndex) => {
+    const isActive = dotIndex === activeReference;
+    dot.classList.toggle('is-active', isActive);
+    dot.setAttribute('aria-selected', String(isActive));
+    dot.tabIndex = isActive ? 0 : -1;
+  });
+}
+
+function stopReferenceRotation() {
+  window.clearInterval(referenceTimer);
+}
+
+function startReferenceRotation() {
+  stopReferenceRotation();
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  referenceTimer = window.setInterval(() => showReference(activeReference + 1), 8000);
+}
+
+referencePrevious.addEventListener('click', () => { showReference(activeReference - 1); startReferenceRotation(); });
+referenceNext.addEventListener('click', () => { showReference(activeReference + 1); startReferenceRotation(); });
+referenceDots.forEach((dot, index) => {
+  dot.addEventListener('click', () => { showReference(index); startReferenceRotation(); });
+  dot.addEventListener('keydown', (event) => {
+    if (event.key !== 'ArrowRight' && event.key !== 'ArrowLeft') return;
+    event.preventDefault();
+    const direction = event.key === 'ArrowRight' ? 1 : -1;
+    const nextIndex = (index + direction + referenceDots.length) % referenceDots.length;
+    showReference(nextIndex);
+    referenceDots[nextIndex].focus();
+    startReferenceRotation();
+  });
+});
+
+referencesViewport.addEventListener('mouseenter', stopReferenceRotation);
+referencesViewport.addEventListener('mouseleave', startReferenceRotation);
+referencesViewport.addEventListener('focusin', stopReferenceRotation);
+referencesViewport.addEventListener('focusout', (event) => {
+  if (!referencesViewport.contains(event.relatedTarget)) startReferenceRotation();
+});
+showReference(0);
+startReferenceRotation();
+
 const contactDialog = document.querySelector('#contact-dialog');
 const openContact = document.querySelector('#open-contact');
 const closeContact = document.querySelector('#close-contact');
