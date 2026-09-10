@@ -20,4 +20,4 @@ The included workflow deploys the repository to GitHub Pages on every push to `m
 
 ## Personal links
 
-Update the LinkedIn, GitHub, and Cal.com URLs in `index.html` if your handles or scheduling provider differ. The profile image is stored as `portrait.jpg`, and the resume is `MaxBov_Resume_june.pdf`.
+Update the LinkedIn, GitHub, and Cal.com URLs in `index.html` if your handles or scheduling provider differ. The profile image is stored as `portrait.jpg`, and the resume is `MaxBov_Resume_august.pdf`.
