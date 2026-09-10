@@ -35,7 +35,7 @@ async function loadResumeViewer() {
     if (!window.pdfjsLib) throw new Error('PDF.js did not load');
     const pdfjs = window.pdfjsLib;
     pdfjs.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
-    const pdf = await pdfjs.getDocument('MaxBov_Resume_june.pdf').promise;
+    const pdf = await pdfjs.getDocument('MaxBov_Resume_august.pdf').promise;
     const canvas = document.querySelector('#pdf-canvas');
     const context = canvas.getContext('2d');
     const pageLabel = document.querySelector('#pdf-page');
